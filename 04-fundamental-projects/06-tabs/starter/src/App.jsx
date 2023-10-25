@@ -1,16 +1,50 @@
-import Title from './Title'
+import { useEffect } from "react";
+import { useState } from "react";
+import JobInfo from "./JobInfo";
+import BtnContainer from "./BtnContainer";
 
-const url = 'https://course-api.com/react-tabs-project';
-
+const url = "https://course-api.com/react-tabs-project";
 
 const App = () => {
-  return (
-    <main>
-      <section className="menu">
-        <Title />
+  const [isLoading, setIsLoading] = useState(true);
+  const [jobs, setJobs] = useState([]);
+  const [currentItem, setCurrentItem] = useState(0);
+
+  // currentItem
+
+  const fetchJobs = async () => {
+    const response = await fetch(url);
+    const newJobs = await response.json();
+    setJobs(newJobs);
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+
+  const jobInfo = jobs[0];
+  // console.log(jobInfo);
+
+  if (isLoading) {
+    return (
+      <section className="jobs">
+        <div className="loading"></div>
       </section>
-    </main>
-  )
+    );
+  }
+
+  return (
+    <section className="jobs-center">
+      {/* button container */}
+      <BtnContainer
+        jobs={jobs}
+        currentItem={currentItem}
+        setCurrentItem={setCurrentItem}
+      />
+      {/* job info */}
+      <JobInfo jobs={jobs} currentItem={currentItem} />
+    </section>
+  );
 };
 export default App;
- 
