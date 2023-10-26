@@ -66,8 +66,8 @@ html {
 
 body {
   background: var(--backgroundColor);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1;
   color: var(--textColor);
@@ -259,10 +259,11 @@ ul {
   margin-top: 10rem;
   width: 80vw;
   max-width: 800px;
-  position: relative;
   height: 450px;
+  position: relative;
   overflow: hidden;
 }
+
 .slide {
   text-align: center;
   position: absolute;
@@ -271,15 +272,6 @@ ul {
   width: 100%;
   height: 100%;
   transition: var(--transition);
-}
-.person-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  border: 4px solid var(--primary-200);
-  box-shadow: var(--shadow-3);
 }
 
 .name {
@@ -292,6 +284,7 @@ ul {
   color: var(--grey-700);
   margin-bottom: 0.75rem;
 }
+
 .text {
   max-width: 35em;
   margin: 0 auto;
@@ -299,11 +292,13 @@ ul {
   line-height: 2;
   color: var(--grey-500);
 }
+
 .icon {
   font-size: 3rem;
   margin-top: 1rem;
   color: var(--primary-500);
 }
+
 .prev,
 .next {
   position: absolute;
@@ -315,20 +310,33 @@ ul {
   display: grid;
   place-items: center;
   border-color: transparent;
-  border-radius: var(--borderRadius);
+  border: var(--borderRadius);
   cursor: pointer;
   transition: var(--transition);
 }
+
 .prev:hover,
 .next:hover {
   background: var(--primary-500);
 }
+
 .prev {
   left: 0;
 }
+
 .next {
   right: 0;
 }
+.person-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border: 4px solid var(--primary-200);
+  box-shadow: var(--shadow-3);
+}
+
 @media screen and (min-width: 800px) {
   .text {
     max-width: 45em;
@@ -340,11 +348,12 @@ ul {
     font-size: 1.5rem;
   }
 }
+
 .next-slide {
   transform: translateX(100%);
 }
 
-/* ============= Slick Carousel =============== */
+/* ================ Slick Carousel ============== */
 
 .slick-container {
   margin: 0 auto;
@@ -353,6 +362,7 @@ ul {
   max-width: 800px;
   text-align: center;
 }
+
 .slick-slide img {
   display: inline-block;
 }
@@ -360,6 +370,7 @@ ul {
 .slick-prev::before {
   color: var(--primary-500) !important;
 }
+
 .slick-next::before {
   color: var(--primary-500) !important;
 }
