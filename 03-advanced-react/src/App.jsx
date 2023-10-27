@@ -1,14 +1,29 @@
-import Final from "./tutorial/01-useState/Final/01-error-example";
-import Starter from "./tutorial/01-useState/Starter/01-error-example";
-import { Home, About } from "./tutorial/04-project-structure/starter/Pages";
+// import Final from "./tutorial/01-useState/Final/01-error-example";
+import Starter from "./tutorial/06-forms/Starter/05-form-data";
+// import Example from "./tutorial/04-project-structure/starter/Example";
+// import { Home, About } from "./tutorial/04-project-structure/starter/Pages";
+
+import List from "./tutorial/05-leverage-javascript/starter/List";
+
+// until 04-
+// function App() {
+//   return (
+//     <div className="container">
+//       {/* <Starter /> */}
+//       {/* <Final /> */}
+//       {/* <Home />
+//       <About /> */}
+//       <Example />
+//     </div>
+//   );
+// }
+
+// export default App;
 
 function App() {
   return (
     <div className="container">
-      {/* <Starter /> */}
-      {/* <Final /> */}
-      <Home />
-      <About />
+      <Starter />
     </div>
   );
 }
