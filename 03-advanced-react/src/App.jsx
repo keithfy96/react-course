@@ -1,5 +1,5 @@
 // import Final from "./tutorial/01-useState/Final/01-error-example";
-import Starter from "./tutorial/10-useReducer/starter/01-useReducer";
+import Starter from "./tutorial/11-performance/starter/04-react-18";
 // import Example from "./tutorial/04-project-structure/starter/Example";
 // import { Home, About } from "./tutorial/04-project-structure/starter/Pages";
 
