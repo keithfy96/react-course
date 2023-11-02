@@ -6,6 +6,11 @@ const Items = () => {
     queryKey: ["tasks"],
     queryFn: () => customFetch.get("/"),
   });
+  // const test = useQuery({
+  //   queryKey: ["tasks"],
+  //   queryFn: () => customFetch.get("/"),
+  // });
+  // console.log(test);
   if (isLoading) {
     return <p style={{ marginTop: "1rem" }}>Loading...</p>;
   }
