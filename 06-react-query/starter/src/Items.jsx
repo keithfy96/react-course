@@ -1,11 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import SingleItem from "./SingleItem";
 import customFetch from "./utils";
+import { useFetchTasks } from "./reactQueryCustomHooks";
+
 const Items = () => {
-  const { isLoading, data, isError, error } = useQuery({
-    queryKey: ["tasks"],
-    queryFn: () => customFetch.get("/"),
-  });
+  const { isLoading, data, isError, error } = useFetchTasks();
   // const test = useQuery({
   //   queryKey: ["tasks"],
   //   queryFn: () => customFetch.get("/"),
@@ -19,7 +18,7 @@ const Items = () => {
   }
   return (
     <div className="items">
-      {data.data.taskList.map((item) => {
+      {data.taskList.map((item) => {
         return <SingleItem key={item.id} item={item} />;
       })}
     </div>
