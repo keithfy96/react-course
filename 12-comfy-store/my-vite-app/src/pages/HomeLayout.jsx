@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import { Outlet, useNavigation } from "react-router-dom";
+import { Header } from "../components";
 
 const HomeLayout = () => {
   const navigation = useNavigation();
@@ -9,11 +10,14 @@ const HomeLayout = () => {
   // console.log(isPageLoading);
   return (
     <>
+      <Header />
       <Navbar />
       {isPageLoading ? (
         <span className="loading loading-spinner loading-lg"></span>
       ) : (
-        <Outlet />
+        <section className="align-element py-20">
+          <Outlet />
+        </section>
       )}
     </>
   );

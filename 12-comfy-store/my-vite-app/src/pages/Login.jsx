@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, useNavigation, redirect } from "react-router-dom";
+import { Link, Form, useNavigation, redirect } from "react-router-dom";
 import axios from "axios";
 import { FormInput, SubmitBtn } from "../components";
 
@@ -41,6 +41,16 @@ const Login = () => {
         <div className="mt-4">
           <SubmitBtn text="login" />
         </div>
+
+        <p className="text-center">
+          Not a mamber yet?
+          <Link
+            to="/register"
+            className="ml-2 link link-hover link-primary capitalize"
+          >
+            register
+          </Link>
+        </p>
       </Form>
     </section>
   );
