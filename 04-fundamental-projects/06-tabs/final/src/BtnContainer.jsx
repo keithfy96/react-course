@@ -2,6 +2,7 @@ const BtnContainer = ({ jobs, currentItem, setCurrentItem }) => {
   return (
     <div className='btn-container'>
       {jobs.map((item, index) => {
+        console.log(item);
         return (
           <button
             key={item.id}

@@ -14,6 +14,7 @@ const Carousel = () => {
     });
   };
   const nextSlide = () => {
+    console.log('text');
     setCurrentPerson((oldPerson) => {
       const result = (oldPerson + 1) % people.length;
       return result;
@@ -22,6 +23,7 @@ const Carousel = () => {
 
   useEffect(() => {
     let sliderId = setInterval(() => {
+      console.log('next');
       nextSlide();
     }, 5000);
     return () => {

@@ -7,6 +7,7 @@ const App = () => {
   const [text, setText] = useState([]);
 
   const handleSubmit = (e) => {
+    console.log(count);
     e.preventDefault();
     let amount = parseInt(count);
     setText(data.slice(0, amount));
@@ -24,7 +25,12 @@ const App = () => {
           step='1'
           max='8'
           value={count}
-          onChange={(e) => setCount(e.target.value)}
+          onChange={(e) => {
+            setCount(e.target.value);
+            console.log();
+            e.target.value;
+            console.log(count);
+          }}
         />
         <button className='btn' type='submit'>
           generate
